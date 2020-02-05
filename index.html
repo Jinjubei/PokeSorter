@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<script>var __pbpa = true;</script><script>var translated_warning_string = 'Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?';</script><script type="text/javascript" language="javascript" src="http://assets.tumblr.com/assets/scripts/pre_tumblelog.js?_v=d5b1303192ef61b63bd92b73fac711ca"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+ 
+  <noscript></noscript><script type="text/javascript" src="http://static.tumblr.com/8blsvta/AAUmlpa5y/mod_k-factory.js"></script>  
+  <script type="text/javascript" src="http://static.tumblr.com/8blsvta/exTmlpa6o/fnc_main_v3.js"></script>
+  <script type="text/javascript" src="http://static.tumblr.com/u77fq8v/ldan1z9z7/aa.js"></script>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
+ 
+<title>Ace Attorney character sorter</title>
+  <style type="text/css">
+ 
+#mainTable {
+   font-size: 14px;
+   font-family: 'Arial', sans-serif;
+   text-align: center;
+   vertical-align: middle;
+   width: 410px;
+   margin-left: auto;
+   margin-right: auto;
+   border-collapse: separate;
+   border-spacing: 10px 5px;
+   
+}
+ 
+.tb_header {
+    padding-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ 
+#fldLeft    {
+    height: 180px;
+        text-align: center;
+        min-width: 120px;
+        border: 1px solid #000;
+        cursor:pointer;
+    padding:10px;
+        font-family: Arial, Helvetica, sans-serif;
+}
+#fldRight   {
+    height: 180px;
+        text-align: center;
+    padding:10px;
+        min-width: 120px;
+        border: 1px solid #000;
+        cursor:pointer;
+        font-family: Arial, Helvetica, sans-serif;
+}
+#fldMiddleT {
+        text-align: center;
+        min-width: 150px;
+        height: 90px;
+        border: 1px solid #000;
+        cursor:pointer;
+        font-family: Arial, Helvetica, sans-serif;
+}
+#fldMiddleB {
+        text-align: center;
+        width: 150px;
+        height: 50px;
+        padding:0px;
+        border: 1px solid #000;
+        cursor:pointer;
+        font-family: Arial, Helvetica, sans-serif;
+}
+ 
+.cbox {
+        cursor:pointer;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9px;
+}
+ 
+#resTable {
+        width:200px;
+        font-size:12px;
+    height:180px;
+        line-height:100%;
+        margin-left:auto;
+        margin-right:auto;
+        border:1px solid #000;
+        border-collapse:collapse;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+}
+ 
+.resTableH {
+        color:#ffffff;
+        background-color:#000000;
+        text-align:center;
+        font-family: Arial, Helvetica, sans-serif;
+}
+.resTableL {
+        color:#000000;
+        border:1px solid #000000;
+        text-align:right;
+        padding-right:5px;
+        font-family: Arial, Helvetica, sans-serif;
+}
+.resTableR {
+        color:#000000;
+        border:1px solid #000000;
+        padding-left:5px;
+        font-family: Arial, Helvetica, sans-serif;
+}
+ 
+a       {
+        text-decoration:none;
+    font-size:15px;
+        font-family: Arial, Helvetica, sans-serif;
+}
+a:hover {
+        color:#99ccff;
+    font-size:15px;
+        font-family: Arial, Helvetica, sans-serif;
+}
+<!--
+.style4 {
+    font-family: Arial, Helvetica, sans-serif;
+        color: #000000;
+        font-weight: normal;
+    font-size:15px;
+}
+a:link {
+        color: #990000;
+    font-size:15px;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:15px;
+}
+a {
+        font-family: Arial, Helvetica, sans-serif;
+        ;font-size:15px;
+}
+a:visited {
+        text-decoration: none;
+        color: #6600FF;font-size:15px;
+        font-size: 11px;
+        font-family: Arial, Helvetica, sans-serif;
+}
+a:hover {
+        text-decoration: none;
+        color: #FF6600;
+        font-size:15px;
+        font-family: Arial, Helvetica, sans-serif;
+}
+a:active {
+        text-decoration: none;
+        font-size:15px;
+        font-family: Arial, Helvetica, sans-serif;
+}
+body {
+background-color:#ffffff;}
+-->
+  </style>
+   
+ 
+<script type="text/javascript" src="http://assets.tumblr.com/assets/scripts/tumblelog.js?_v=dd8c4ed07e8aca559e5b8ae3e21a2de6"></script><meta http-equiv="x-dns-prefetch-control" content="off"/>
+ 
+</head><body onLoad="startup()">
+  <div align="center">
+   <table id="mainTable">
+    <thead>
+     <tr>
+      <td colspan="9" class="tb_header">Battle No. <span id="lblCount">-</span><br>
+<span id="lblProgress">0</span>% sorted.<br>
+       <div align="center"><span id="GaGprog"></span></div>
+      </td>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td id="fldLeft" onClick="fnc_Sort(-1);" rowspan="2"><img src="http://i.imgur.com/iQczVTe.png"></td>
+          <td style="border: 0px; width: 7px;" rowspan="2"></td>
+      <td id="fldMiddleT" onClick="fnc_Sort(0);"><p>Read <br>Instructions<br> Below</p>
+        </td>
+          <td style="border: 0px; width: 7px;" rowspan="2"></td>
+      <td id="fldRight" onClick="fnc_Sort(1);" rowspan="2"><img src="http://i.imgur.com/vSk4zW3.png"></td>
+     </tr>
+     <tr>
+      <td id="fldMiddleB" onClick="fnc_Undo();"> Click to Start!</p></td>
+     </tr>
+    </tbody>
+    <tfoot>
+     <tr>
+      <td colspan="3"><div align="center">
+        <input id="optImage" type="checkbox" checked>
+        <span class="tb_header">Display images while sorting.
+          </input>
+        </span></div></td>
+     </tr>
+    </tfoot>
+ 
+   </table>
+  </div>
+  <br>
+   <table id="optTable" align="center" width="450"></table>
+  <br>
+  <div id="ranTable" width="640px" align="center" class="tb" style="display:none;">
+<div>  
+</div>
+</div>
+  <div class="style4" id="resultField" style="text-align:center;">
+    <p class="instructions" style="text-align:center; font-size:15px;">
+<b>INSTRUCTIONS</b> <br>
+After starting the game, simply click the character that you prefer among the two shown, or, if you equally like/dislike/don't care about both characters, you can select the "tie" option.<br> Once all the matches have been solved (or tied), a list of your favorite characters will be automatically generated! <p>
+ 
+<b>ATTENTION</b> <br>
+Please select all games you are familiar with. Keep in mind that <b>spoilers may be present</b>.<br> The total number of characters is <b>140</b> - if you're looking for a quicker fix, please check out <a href="http://aceattorneycharactersort.tumblr.com">this other sorter</a> instead! <p>
+ 
+All questions, comments and troubleshooting should be directed <a href="/ask">here</a>. <p>
+ 
+<b>CREDITS</b> <br>
+Most, if not all, images are from <a href="http://www.court-records.net">Court Records</a>. Thanks to <a href="http://clayvierjustice.tumblr.com">my sister</a> for helping figure out which characters appeared in which games, which images I should use for which characters, and for having the idea in the first place. <br>
+Original script by <a href="http://kouga.net">K-Factory</a>; original Touhou sorter by <a href="http://mainyan.sakura.ne.jp/">E-Phantasm</a>, translated into English <a href="http://www.freewebs.com/tohosort/">here</a>.</p>
+<br>
+   
+  </div>
+  <!-- Start of StatCounter Code for Tumblr -->
+<script type="text/javascript">
+var sc_project=8899456;
+var sc_invisible=1;
+var sc_security="e997725a";
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="visit tracker
+on tumblr" href="http://statcounter.com/tumblr/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/8899456/0/e997725a/1/"
+alt="visit tracker on tumblr"></a></div></noscript>
+<!-- End of StatCounter Code for Tumblr -->
+    <script language=JavaScript>
+<!--
+ 
+//Disable right click script III- By Renigade (renigade@mediaone.net)
+//For full source code, visit http://www.dynamicdrive.com
+ 
+var message="";
+///////////////////////////////////
+function clickIE() {if (document.all) {(message);return false;}}
+function clickNS(e) {if
+(document.layers||(document.getElementById&&!document.all)) {
+if (e.which==2||e.which==3) {(message);return false;}}}
+if (document.layers)
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;}
+ 
+document.oncontextmenu=new Function("return false")
+// -->
+</script>
+</body>
+</html>
